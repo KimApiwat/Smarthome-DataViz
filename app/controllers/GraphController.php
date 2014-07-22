@@ -4,9 +4,6 @@ class GraphController extends BaseController {
 		return View::make('layouts.testmaster');
 	}
 	protected function createParcoordinateVisualization()	{
-		echo "<pre>";
-		print_r(Input::All());
-		echo "</pre>";
 		$input = Input::get('option');
 		if($input['graphI'] == 'default')	{
 			$data_handle = new DataHandle();
@@ -22,6 +19,9 @@ class GraphController extends BaseController {
 				->with('array_activity',$array_activity);
 		}else if($input['graph'] == 'specific')	{
 		}else { }
+	}
+	protected function updateParcoordinateVisualization()	{
+
 	}
 
 	protected function createClockVisualization()	{
@@ -50,6 +50,9 @@ class GraphController extends BaseController {
 			->with('activity',$activity)
 			->with('dataset_array',$dataset_array)
 			->with('location_array',$location_array);
+	}
+	protected function updateClockVisualization()	{
+			
 	}
 
 	protected function createHeatmapVisualization()	{

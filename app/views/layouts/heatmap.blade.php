@@ -13,8 +13,8 @@
     <script language="javascript" src="{{URL::asset('lib/js/heatmap.js')}}"></script>
 
     <script type="text/javascript">
-    var data = <?php echo $json_data ?>;
-    var number_point = data.length;
+		var data = <?php echo $json_data ?>;
+		var number_point = data.length;
     </script>
 	<input type="file" id="imageLoader" name="imageLoader"/>
     <label id="current"></label>
