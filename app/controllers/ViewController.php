@@ -11,5 +11,9 @@ class ViewController extends BaseController	{
 	public function showHeatmapPage()	{
 		return View::make('layouts.heatmap');
 	}
+	public function showParcoordinateVisualization()	{
+	}
+	public function showClockVisualization()	{
+	}
 }
 ?>
