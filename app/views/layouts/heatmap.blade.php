@@ -25,7 +25,7 @@
 		<div style="text-align:center;"><input type="file" id="imageLoader" name="imageLoader"/></div>
 
 		<div id="showimage" style="text-align:center;margin-top:20px;">
-			<canvas style="display:none;border:1px ridge green;" id="special"></canvas>
+			<canvas style="display:none;border:1px ridge green;" id="myCanvas"></canvas>
 		</div>
 		<div id="heatmapViz" style="display:none;text-align:center;margin-top:20px;">
 			<g id="viz"></g>
@@ -60,7 +60,7 @@
 				</div>
 			</div>
 			<div class ="col-sm-6" style="margin-top:50px; text-align:center;">	
-				<button type="button" id="undo" class="btn btn-default" style="margin-right:10px">Undo</button>
+				<button type="button" id="undo_button" class="btn btn-default" style="margin-right:10px">Undo</button>
 				<button type="button" id="generate_HeatMap" disabled="disabled" class="btn btn-default">Generate Graph</button>
 			</div>
 		</div>

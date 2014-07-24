@@ -107,7 +107,7 @@ $(document).ready(function() {
 		}
 	});
 });
-
+// this function For Clock Visualization
 $(function () {
   
     // Parse the data from an inline table using the Highcharts Data plugin

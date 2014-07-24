@@ -1,5 +1,8 @@
 @extends('layouts.master')
 @section('content')
+
+	<script type="text/javascript" src="{{URL::asset('lib/js/gen.graph.button.js')}}"></script>
+	
 	<h1>Generate Graph page !!!!</h1>
 	<form action="create" method="post" role="form" class="form-horizontal">
 		<div class="form-group">
@@ -79,7 +82,7 @@
 			<div class="radio">
 				<label>
 					{{Form::radio('type','Clock',false,array('id'=>'graphII'))}}
-					Clock
+					Radial
 				</label>
 			</div>
 			<div class="row">

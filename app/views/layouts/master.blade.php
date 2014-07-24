@@ -15,8 +15,6 @@
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('lib/bootstrap/css/bootstrap.css')}}"></link>
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('lib/bootstrap/css/bootstrap-theme.css')}}"></link>
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('lib/css/style.css')}}"></link>
-		<!-- custom js -->
-		<script type="text/javascript" src="{{URL::asset('lib/js/custom.js')}}"></script>
 		<!-- custom css -->
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('lib/css/custom.css')}}"></link>
 		<style>
@@ -55,6 +53,12 @@
 			</nav>
 		</header>
 		<div class="container" role="main" width="100%" height="100%">
+			<div>
+				<ul class="pager">
+					<li><a href="#">Previous</a></li>
+					<li><a href="#">Next</a></li>
+				</ul>
+			</div>
 			@yield('content')
 			<footer>
 				<hr>
