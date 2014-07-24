@@ -1,7 +1,8 @@
 @extends('layouts.master')
 @section('content')
-		<h1> Event : {{$activity}} </h1> 
-		<h2> Day : {{$start_day}} to {{$end_day}} </h2>
+	<script type="text/javascript" src="{{URL::asset('lib/js/radialgraph.js')}}"></script>
+	<h1> Event : {{$activity}} </h1> 
+	<h2> Day : {{$start_day}} to {{$end_day}} </h2>
 	<div id="chart"> </div>
 	<script language="javascript">
 		/*
