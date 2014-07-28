@@ -67,6 +67,11 @@ jQuery(document).ready(function(){
 
 
 	});
+	$("#myCanvas").mousemove(function(e) {
+		var x = e.pageX-this.offsetLeft;
+		var y = e.pageY-this.offsetTop;
+		$('.status').html("( "+ x + " , " + y + " )");
+	});
 	$("#myCanvas").click(function(e){ 
 		$("#undo_button").prop("disabled",false);
 		var x = e.pageX - this.offsetLeft;
@@ -102,7 +107,7 @@ jQuery(document).ready(function(){
 
 			}
 
-			$('#datatable > tbody:last').append('<tr> <td>'+data[i]["id"]+'</td> <td>'+data[i]["activity"]+'</td> <td>'+data[i]["location"]+'</td> <td>'+'( '+x+','+y+' )'+ '</td><td><span class="label label-success">Saved</span></td> </tr>');
+			$('#datatable > tbody:last').append('<tr> <td>'+circleId+'</td> <td>'+data[i]["activity"]+'</td> <td>'+data[i]["location"]+'</td> <td>'+'( '+x+','+y+' )'+ '</td><td><span class="label label-success">Saved</span></td> </tr>');
 			indexId++;
 			i++;
 			console.log(arr_obj_data);

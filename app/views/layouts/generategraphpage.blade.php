@@ -4,6 +4,7 @@
 	<script type="text/javascript" src="{{URL::asset('lib/js/gen.graph.button.js')}}"></script>
 	
 	<h1>Generate Graph page !!!!</h1>
+	<div><ul class="pager"><li class="previous"><a href="#">&larr; Home</a></li></ul></div>
 	<form action="create" method="post" role="form" class="form-horizontal">
 		<div class="form-group">
 			<div class="radio">

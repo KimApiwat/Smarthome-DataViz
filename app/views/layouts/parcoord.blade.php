@@ -4,32 +4,26 @@
 	<p> This is appended to the master sidebar. </p>
 @stop
 @section('content')
+	<style>
+		/* data table styles */
+		#grid { height: 198px; }
+		.row, .header { clear: left; font-size: 12px; line-height: 18px; height: 18px; }
+		.row:nth-child(odd) { background: rgba(0,0,0,0.05); }
+		.header { font-weight: bold; }
+		.cell { float: left; overflow: hidden; white-space: nowrap; width: 110px; height: 18px; }
+		.col-0 { width: 110px; }
+	</style>	
 	<div class="page-header">
 		<h1>Visualization</h1>
 	</div>
-	
-	<div class="container">
-		<div id="graph" class="parcoords" style="width:1200px;height:400px"></div>
-	{{ Form::open(array('action'=>'DataManagementController@createGraphVisualization'))}}
-
-        <input id="choose_activity" type="checkbox" name="choose_activity" value="choose_activity" />
-		{{Form::label('choose_activity','choose activity')}}
-        {{Form::select('act1',array_combine($array_activity,$array_activity),'default',array('id'=>'act1','disabled'=>'disabled'))}}
-		{{Form::select('act2',array_combine($array_activity,$array_activity),'default',array('id'=>'act2','disabled'=>'disabled'))}}
-        {{Form::select('act3',array_combine($array_activity,$array_activity),'default',array('id'=>'act3','disabled'=>'disabled'))}}
-        {{Form::select('act4',array_combine($array_activity,$array_activity),'default',array('id'=>'act4','disabled'=>'disabled'))}}
-        {{Form::select('act5',array_combine($array_activity,$array_activity),'default',array('id'=>'act5','disabled'=>'disabled'))}}
-       	<input id="choose_specific_day" type="checkbox" name="choose_specific_day" value="choose_specific_day"/>
-		{{Form::label('choose_specific_day','choose specific day')}}
-		{{Form::select('first_day',array_combine($array_day,$array_day),'default',array('id'=>'first_day','disabled'=>'disabled'))}}
-		{{Form::label('to','to')}} 
-        {{Form::select('second_day',array_combine($array_day,$array_day),'default',array('id'=>'second_day','disabled'=>'disabled'))}}
-		{{Form::submit('update',array('name'=>'submit'))}}
-		{{Form::submit('default',array('name'=>'submit'))}}
-	{{ Form::close() }}
-		<div class="container" style="height:200px; overflow:scroll">
+	<div><ul class="pager"><li class="previous"><a href="#">&larr; Back</a></li></ul></div>	
+	<div class="panel panel-default"><div class="panel-body">
+		<div id="graph" class="parcoords" style="width:100%;height:500px"></div>
+		<div class="container" style="width:100%;height:200px; overflow:scroll">
 			<div id="grid"></div>
 		</div>
+	</div></div>
+
 	<script language="javascript" id="brushing"> var data =  <?php echo $json_default_data ?>; </script>
 	<script language="javascript" src="{{URL::asset('lib/js/draw.parcoords.graph.js')}}"></script>
 	@stop

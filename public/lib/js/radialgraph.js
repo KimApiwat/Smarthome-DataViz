@@ -16,7 +16,7 @@ $(function () {
 	    },
 	    
 	    title: {
-	        text: 'Visualization'
+	        text: 'Clock Visualization',
 	    }, 
 	    pane: {
 	    	size: '85%'

@@ -9,7 +9,7 @@
 		<script type="text/javascript" src="{{URL::asset('lib/js/underscore.math.js')}}"> </script>
 		<script type="text/javascript" src="{{URL::asset('lib/js/divgrid.js')}}"> </script>
     	<script type="text/javascript" src="{{URL::asset('lib/js/jQuery/jquery-2.1.1.js')}}"> </script>
-		<script type="text/javascript" src="{{URL::asset('lib/js/radialBarChart.js')}}"> </script>
+		<script type="text/javascript" src="{{URL::asset('lib/bootstrap/js/bootstrap-filestyle.min.js')}}"></script>
 		<!-- stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('lib/css/d3.parcoords.css')}}"></link>
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('lib/bootstrap/css/bootstrap.css')}}"></link>
@@ -17,15 +17,6 @@
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('lib/css/style.css')}}"></link>
 		<!-- custom css -->
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('lib/css/custom.css')}}"></link>
-		<style>
-			/* data table styles */
-			#grid { height: 198px; }
-			.row, .header { clear: left; font-size: 12px; line-height: 18px; height: 18px; }
-			.row:nth-child(odd) { background: rgba(0,0,0,0.05); }
-			.header { font-weight: bold; }
-			.cell { float: left; overflow: hidden; white-space: nowrap; width: 120px; height: 18px; }
-			.col-0 { width: 180px; }
-		</style>
 	</head>
 	<body role="document">
 		<header>
@@ -53,12 +44,6 @@
 			</nav>
 		</header>
 		<div class="container" role="main" width="100%" height="100%">
-			<div>
-				<ul class="pager">
-					<li><a href="#">Previous</a></li>
-					<li><a href="#">Next</a></li>
-				</ul>
-			</div>
 			@yield('content')
 			<footer>
 				<hr>
