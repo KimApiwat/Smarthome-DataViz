@@ -3,6 +3,9 @@ class GraphController extends BaseController {
 	protected function showTestMaster()	{
 		return View::make('layouts.testmaster');
 	}
+	/*
+	*	Create Parcoordinate Graph Visualization.
+	*/
 	protected function createParcoordinateVisualization()	{
 		$input = Input::get('option');
 		if($input['graphI'] == 'default')	{
@@ -21,9 +24,11 @@ class GraphController extends BaseController {
 		}else { }
 	}
 	protected function updateParcoordinateVisualization()	{
-
+		// Update Parcoordinate Graph
 	}
-
+	/*
+	*	Create Clock Graph Visualization.
+	*/
 	protected function createClockVisualization()	{
 		$input = Input::get('option');	
 		//var_dump($input);
@@ -52,9 +57,11 @@ class GraphController extends BaseController {
 			->with('location_array',$location_array);
 	}
 	protected function updateClockVisualization()	{
-			
+		// Update Clock Visualization	
 	}
-
+	/*
+	*	Create Heatmap Visualization.
+	*/
 	protected function createHeatmapVisualization()	{
 		$array_data = DB::table('smarthome')
 				->select('activity','location',DB::raw('count(*)'))

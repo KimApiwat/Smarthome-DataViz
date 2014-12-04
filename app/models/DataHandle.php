@@ -1,5 +1,9 @@
 <?php
 class DataHandle	{
+	/**
+	 * Read data from CSV file.
+	 * Return : Data that read from CSV file.
+	 */
 	public function getRawDataFromPaht($filepath)	{
 		$array_raw_data = $fields = array();
 		$i=0;
@@ -28,9 +32,15 @@ class DataHandle	{
 		
 		return $array_raw_data;
 	}
+	/**
+	 * Get All Data from Database.
+	 */
 	public function getRawDataFromDB()	{
 		return  DB::table('smarthome')->select('day','time','activity','condition')->get();
 	}
+	/**
+	 * Get All Date from Database.
+	 */
 	public function getAllDay()	{
 		$days = DB::table('smarthome')->distinct()->select('day')->get();
 		$array_days = array();
@@ -39,6 +49,9 @@ class DataHandle	{
 		}
 		return $array_days;
 	}
+	/**
+	 * Get All Activity from Database.
+	 */
 	public function getAllActivity()	{
 		$activities = DB::table('smarthome')->distinct()->select('activity')->get();
 		$array_activities =array();
@@ -47,6 +60,9 @@ class DataHandle	{
 		}
 		return $array_activities;
 	}
+	/**
+	 * Get sensor location from dataset.
+	 */
 	public function getLocation($dataset)	{
 		$array_location = array();
 		foreach($dataset as $data)	{
@@ -56,6 +72,9 @@ class DataHandle	{
 		}
 		return $array_location;
 	}
+	/**
+	 * Create Data format for create Parcoordinate Graph Visualization.
+	 */
 	public function getDefaultDataArrayForParcoordinate($array_raw_data,$array_day,$array_activity)	{
 		//-------------------- Create Multidimension array ----------------------
 		$multiple_array = array();
@@ -91,6 +110,9 @@ class DataHandle	{
 		}
 		return array_values($array_default_data);
 	}
+	/**
+	 * Create Data format for craete Clock Graph Visualization.
+	 */
 	public function getDataForCircleGraph($dataset)	{
 		
 		$array = array_fill(0,24,0);
@@ -158,7 +180,7 @@ class DataHandle	{
 		return $multiple_array;
 	}
 
-
+	
 	public function calculateTime($multiple_array,$time_start,$time_end,$location)	{
 		$hour_start = (int)date('G',$time_start);
 		$min_start = (int)date('i',$time_start);

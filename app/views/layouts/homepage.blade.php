@@ -7,6 +7,7 @@
 				<p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 			</div>
 		</div>
+		<!-- Form to Action to DataManagementController.php  function readCSVfile -->
 		{{Form::open(array('action'=>'DataManagementController@readCSVfile','files'=>true ,"class"=>"form-horizontal","role"=>"form"))}}
 			{{Form::label('file','Please choose file')}}
 			<div class="input-group input-group-lg">

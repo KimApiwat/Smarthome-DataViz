@@ -17,12 +17,22 @@ Route::any('/',
 		'uses' => 'HomeController@showWelcome'
 	]
 );
+/*
+|-----------------------------------------------------
+|	/homepage : Show Homepage.	
+|-----------------------------------------------------
+*/
 Route::get('homepage',
 	[
 		'as'=>'homepage',
 		'uses'=>'ViewController@showHomepage'
 	]
 );
+/*
+|--------------------------------------------------------------------------------------------------
+|	/readfile : Read Data from CSV file then save data into databases.		
+|--------------------------------------------------------------------------------------------------
+*/
 Route::any('readfile',
 	[
 		'uses'=>'DataManagementController@readCSVfile',

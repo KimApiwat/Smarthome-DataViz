@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 	<script type="text/javascript" src="{{URL::asset('lib/js/radialgraph.js')}}"></script>
-		<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<script src="http://code.highcharts.com/highcharts-more.js"></script>
 	<script src="http://code.highcharts.com/modules/data.js"></script>
 	<script src="http://code.highcharts.com/modules/exporting.js"></script>
