@@ -118,7 +118,7 @@ jQuery(document).ready(function(){
 		context.stroke();
 		//console.log(arr_obj_data);
 	});
-	$
+
 	$("#generate_HeatMap").click(function(e){
 		$(this).prop("disabled",true);
 		$("#undo_button").prop("disabled",true);

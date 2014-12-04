@@ -1,5 +1,10 @@
 <?php
 class DataManagementController extends BaseController	{
+	/**
+	 *	+-------------------------------------------------------------------------------------------+
+	 *	|  Read data from CSV file format then save data into Database ( localhost ).               |
+	 *	+-------------------------------------------------------------------------------------------+
+	 */
 	public function readCSVfile()
 	{
 		$input = Input::all();

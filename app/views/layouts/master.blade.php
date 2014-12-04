@@ -3,7 +3,7 @@
 	<head> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 		<!-- script -->
-		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"> </script> 
+		<script type="text/javascript" src="{{URL::asset('lib/js/d3/d3.v3.min.js')}}"></script>
 		<script type="text/javascript" src="{{URL::asset('lib/js/d3.parcoords.js')}}"> </script>
 		<script type="text/javascript" src="{{URL::asset('lib/js/underscore.js')}}"> </script>
 		<script type="text/javascript" src="{{URL::asset('lib/js/underscore.math.js')}}"> </script>

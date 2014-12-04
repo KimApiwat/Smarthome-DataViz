@@ -4,12 +4,11 @@
       #canvas{background-color:yellow;}
       .tooltip {
             position: absolute;
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 100px;
             pointer-events: none;
         }
     </style>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script language="javascript" src="{{URL::asset('lib/js/heatmap.js')}}"></script>
 
     <script type="text/javascript">

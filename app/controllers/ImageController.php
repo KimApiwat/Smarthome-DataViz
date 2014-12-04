@@ -1,11 +1,14 @@
 <?php
-
+/**
+*	This Class handle Browsing image ( home plan ) 
+*
+**/
 class ImageController extends BaseController {
 
 	public function getUploadForm() {
 		return View::make('layouts.upload');
 	}
-
+	
 	public function postUpload() {
 		$file = Input::file('image');
 		$input = array('image' => $file);
